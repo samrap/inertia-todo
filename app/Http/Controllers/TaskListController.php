@@ -17,4 +17,11 @@ class TaskListController extends Controller
             ]),
         ]);
     }
+
+    public function show($id)
+    {
+        return Inertia::render('TaskList/Show', [
+            'list' => TaskList::findOrFail($id)->only(['id', 'name']),
+        ]);
+    }
 }

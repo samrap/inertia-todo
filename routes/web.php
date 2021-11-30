@@ -31,6 +31,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('/lists', [TaskListController::class, 'index'])->name('task-lists.index');
+    Route::get('/lists/{id}', [TaskListController::class, 'show'])->name('task-lists.show');
 });
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
