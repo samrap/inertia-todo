@@ -36,7 +36,7 @@
                                     12/01/21
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">View</a>
+                                    <Link :href="route('task-lists.show', list.id)" class="text-indigo-600 hover:text-indigo-900">View</Link>
                                 </td>
                             </tr>
                         </tbody>
@@ -46,3 +46,13 @@
         </div>
     </div>
 </template>
+
+<script>
+import { Link } from "@inertiajs/inertia-vue3";
+
+export default {
+    components: {
+        Link: Link
+    }
+}
+</script>
