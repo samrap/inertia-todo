@@ -22,6 +22,10 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
+
+                                <jet-nav-link :href="route('task-lists.index')" :active="route().current('task-lists.index')">
+                                    Lists
+                                </jet-nav-link>
                             </div>
                         </div>
 
